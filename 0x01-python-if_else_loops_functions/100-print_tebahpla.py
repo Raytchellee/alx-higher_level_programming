@@ -7,4 +7,5 @@ def print_rev_alph():
             char = chr(idx)
         print("{}".format(char), end='')
 
+
 print_rev_alph()
