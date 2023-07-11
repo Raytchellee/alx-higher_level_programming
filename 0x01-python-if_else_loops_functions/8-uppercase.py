@@ -5,6 +5,6 @@ def uppercase(str):
         if (ord(c) in range(97, 123)):
             c = chr(ord(c) - 32)
         if (idx == len(str) - 1):
-            print(c)
+            print("{}".format(c))
         else:
-            print(c, end='')
+            print("{}".format(c), end='')
