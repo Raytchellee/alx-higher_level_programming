@@ -23,6 +23,6 @@ void print_python_list_info(PyObject *p)
 		entry = PyList_GetItem(p, idx);
 		printf("%s\n", Py_TYPE(entry)->tp_name);
 
-		idx++
+		idx++;
 	}
 }
