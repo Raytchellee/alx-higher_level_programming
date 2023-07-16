@@ -9,7 +9,7 @@
 void print_python_list_info(PyObject *p)
 {
 	PyObject *entry;
-	int idx, count, space;
+	int idx = 0, count, space;
 
 	space = ((PyListObject *)p)->allocated;
 	count = Py_SIZE(p);
@@ -23,6 +23,6 @@ void print_python_list_info(PyObject *p)
 		entry = PyList_GetItem(p, idx);
 		printf("%s\n", Py_TYPE(entry)->tp_name);
 
-        idx++
+		idx++
 	}
 }
