@@ -12,8 +12,8 @@ listint_t *rev_linked_list(listint_t **head)
 
 	while (current)
 	{
-		temp = current->temp;
-		current->temp = new_node;
+		temp = current->next;
+		current->next = new_node;
 		new_node = current;
 		current = temp;
 	}
@@ -44,7 +44,7 @@ int is_palindrome(listint_t **head)
 	}
 
 	temp = *head;
-	mid = length / 2
+	mid = length / 2;
 	for (idx = 0; idx < mid - 1; idx++)
 		temp = temp->next;
 	if ((length % 2) == 0 && temp->n != temp->next->n)
