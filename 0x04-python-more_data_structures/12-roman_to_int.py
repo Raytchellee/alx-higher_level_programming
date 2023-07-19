@@ -1,23 +1,24 @@
-#!/usr/bin/python3
-def roman_to_int(roman_string):
-    if (type(roman_string) != str or roman_string == None):
+nt(roman_string):
+    if (type(roman_string) != str or roman_string is None):
         return 0
     total = 0
-    idy = 0
-    while idy < len(roman_string):
-        idx = roman_string[idy]
+    t = 0
+    l = len(roman_string)
+    while t < l:
+        idx = roman_string[t]
         if (idx == 'I'):
-            if (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'V'):
-                idy += 1
+            if (t + 1 < l 
+                and roman_string[t + 1] == 'V'):
+                t += 1
                 total += 4
-            elif (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'X'):
-                idy += 1
+            elif (t + 1 < l and roman_string[t + 1] == 'X'):
+                t += 1
                 total += 9
-            elif (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'I'):
+            elif (t + 1 < l and roman_string[t + 1] == 'I'):
                 count = 1
-                while (idy < len(roman_string) and idy + 1 < len(roman_string) and roman_string[idy + 1] == 'I'):
+                while (t < l and t + 1 < l and roman_string[t + 1] == 'I'):
                     count = count + 1
-                    idy += 1
+                    t += 1
                 total += count
             else:
                 total += 1
@@ -25,49 +26,48 @@ def roman_to_int(roman_string):
         elif (idx == 'V'):
             total += 5
         elif (idx == 'X'):
-            if (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'L'):
-                idy += 1
+            if (t + 1 < l and roman_string[t + 1] == 'L'):
+                t += 1
                 total += 40
-            elif (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'C'):
-                idy += 1
+            elif (t + 1 < l and roman_string[t + 1] == 'C'):
+                t += 1
                 total += 90
-            elif (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'X'):
+            elif (t + 1 < l and roman_string[t + 1] == 'X'):
                 count = 10
-                while (idy < len(roman_string) and idy + 1 < len(roman_string) and roman_string[idy + 1] == 'X'):
+                while (t < l and t + 1 < l and roman_string[t + 1] == 'X'):
                     count = count + 10
-                    idy += 1
+                    t += 1
                 total += count
             else:
                 total += 10
         elif (idx == 'L'):
             total += 50
         elif (idx == 'C'):
-            if (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'D'):
-                idy += 1
+            if (t + 1 < l and roman_string[t + 1] == 'D'):
+                t += 1
                 total += 400
-            elif (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'M'):
-                idy += 1
+            elif (t + 1 < l and roman_string[t + 1] == 'M'):
+                t += 1
                 total += 900
-            elif (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'C'):
+            elif (t + 1 < l and roman_string[t + 1] == 'C'):
                 count = 100
-                while (idy < len(roman_string) and idy + 1 < len(roman_string) and roman_string[idy + 1] == 'C'):
+                while (t < l and t + 1 < l and roman_string[t + 1] == 'C'):
                     count = count + 100
-                    idy += 1
+                    t += 1
                 total += count
             else:
                 total += 100
         elif (idx == 'D'):
             total += 500
         elif (idx == 'M'):
-            if (idy + 1 < len(roman_string) and roman_string[idy + 1] == 'M'):
+            if (t + 1 < l and roman_string[t + 1] == 'M'):
                 count = 1000
-                while (idy < len(roman_string) and idy + 1 < len(roman_string) and roman_string[idy + 1] == 'M'):
+                while (t < l and t + 1 < l and roman_string[t + 1] == 'M'):
                     count = count + 1000
-                    idy += 1
+                    t += 1
                 total += count
             else:
                 total += 1000
-        idy += 1
+        t += 1
 
     return total
-
