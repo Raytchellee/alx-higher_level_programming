@@ -1,5 +1,5 @@
-
-cumentation for python class"""
+#!/usr/bin/python3
+"""Documentation for python class"""
 
 
 class Square:
