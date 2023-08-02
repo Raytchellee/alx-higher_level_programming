@@ -51,7 +51,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-    def __str__(self):
+    def __result__(self):
         '''square of hash'''
         res = []
         if self.__size == 0:
