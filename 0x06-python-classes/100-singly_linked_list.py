@@ -45,7 +45,7 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        ''' inserts node to sorted list        '''
+        ''' inserts node to sorted list'''
         if self.__head is None:
             self.__head = Node(value)
         elif value <= self.__head.data:
@@ -63,9 +63,8 @@ class SinglyLinkedList:
     def __str__(self):
         ''' prints all linked list values'''
         current = self.__head
-        values = []
+        res = ""
         while current is not None:
-            values.append(str(current.data))
-            values.append("\n")
+            res = res + (str(current.data)) + "\n"
             current = current.next_node
-        return ''.join(values[:-1])
+        return res
