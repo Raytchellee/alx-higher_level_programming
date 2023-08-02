@@ -64,8 +64,9 @@ class SinglyLinkedList:
     def __str__(self):
         ''' prints all linked list values'''
         current = self.__head
-        res = ""
+        values = []
         while current is not None:
-            res = res + (str(current.data)) + "\n"
+            values.append(str(current.data))
+            values.append("\n")
             current = current.next_node
-        return res[:-1]
+        return ''.join(values[:-1])
