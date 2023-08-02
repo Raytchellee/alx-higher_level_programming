@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for magic calculations in Python"""
 
 import math
 
