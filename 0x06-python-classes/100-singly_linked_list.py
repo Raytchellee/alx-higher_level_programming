@@ -40,6 +40,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """A single linked list class"""
     def __init__(self):
         ''' sets private head'''
         self.__head = None
