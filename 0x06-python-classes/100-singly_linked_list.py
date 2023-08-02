@@ -68,4 +68,4 @@ class SinglyLinkedList:
         while current is not None:
             res = res + (str(current.data)) + "\n"
             current = current.next_node
-        return res
+        return res[:-1]
