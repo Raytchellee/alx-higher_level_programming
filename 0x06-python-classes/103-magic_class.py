@@ -4,7 +4,7 @@ import math
 
 
 class MagicClass:
-    '''magic calculation class'''
+    '''magic calculation class in python'''
     def __init__(self, radius=0):
         '''initialize self radius'''
         self.__radius = 0
@@ -13,9 +13,9 @@ class MagicClass:
         self.__radius = radius
 
     def area(self):
-        '''calculate area'''
-        return (self.__radius ** 2) * math.pi
+        '''calculate area of a circle'''
+        return  math.pi * (self.__radius ** 2)
 
     def circumference(self):
-        '''find the circumference'''
-        return 2 * math.pi * self.__radius
+        '''find the circumference of a circle'''
+        return 2 * self.__radius * math.pi
