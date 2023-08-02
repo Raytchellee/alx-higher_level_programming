@@ -52,3 +52,4 @@ class Square:
 
     def __ne__(self, other):
         """compares not equal to"""
+        return self.area() != other.area()
