@@ -1,0 +1,152 @@
+===================
+Module for addition
+===================
+
+==============
+Import module:
+==============
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+=========
+Function:
+=========
+A function that sums up two integers
+
+
+===========
+Operations:
+===========
+Parameters must be of type integers or floats, otherwise raise a TypeError
+with message 'a must be an integer' or 'b must be an integer' respectively
+
+=========
+Testcases
+=========
+
+=========================
+Test for valid parameters
+=========================
+
+
+    >>> add_integer(-5, 9)
+    4
+
+    >>> add_integer(5, -9)
+    -4
+
+    >>> add_integer(5, 9)
+    14
+
+    >>> add_integer(16.5, 13.1)
+    29
+
+    >>> add_integer(9, 11.4)
+    20
+
+    >>> add_integer(11.4, 9)
+    20
+
+    >>> add_integer(-8.6, -2)
+    -10
+
+    >>> add_integer(50.2, -20)
+    30
+
+    >>> add_integer(12)
+    110
+
+    >>> add_integer(2.5)
+    100
+
+    >>> add_integer(999999999999999999999999999999, 1)
+    1000000000000000000000000000000
+
+    >>> [add_integer(idx, idx * 2) for idx in range(10)]
+    [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+
+=========================
+Test for invalid parameters
+=========================
+
+    >>> add_integer(None, 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(20, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer((1, 2), 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, (1, 2))
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(1, "Stringy")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+	 >>> add_integer(True, 50)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+	>>> add_integer(3, False)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer((5.9, 10), [3, 4]
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+=========================
+Test for wrong parameters
+=========================
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(a, 5)
+    Traceback (most recent call last):
+    NameError: name 'a' is not defined
+
+=======================================================
+Test for Infinity and NaN
+=======================================================
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(6, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(-float('inf'), 20)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('NaN'), 35)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+==================
+Test for docstring
+==================
+
+    >>> x = __import__("0-add_integer").__doc__
+    >>> len(x) > 1
+    True
+
+    >>> y = __import__("0-add_integer").add_integer.__doc__
+    >>> len(y) > 1
+    True
+
+
+
+
