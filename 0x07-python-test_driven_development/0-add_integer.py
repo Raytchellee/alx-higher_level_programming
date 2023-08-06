@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""A module for adding two parameters"""
+"""
+    A module for adding two parameters
+"""
 
 def add_integer(a, b=98):
     """Adds two integers"""
