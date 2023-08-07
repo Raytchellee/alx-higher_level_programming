@@ -1,0 +1,106 @@
+================================================
+Module for printing squares of # with given size
+================================================
+
+==============
+Import module:
+==============
+	>>> print_square = __import__("4-print_square").print_square
+
+
+=========
+Function:
+=========
+A function that prints out squares
+
+
+===========
+Operations:
+===========
+Parameters must be of type int, otherwise raise a TypeError
+
+==================
+Testcases
+==================
+
+==================
+Test for docstring
+==================
+
+	>>> x = __import__("4-print_square").__doc__
+	>>> print(len(x) > 0)
+	True
+
+	>>> y = __import__("4-print_square").print_square.__doc__
+	>>> print(len(y) > 0)
+	True
+
+==================
+Test for int input
+==================
+	>>> print_square(3)
+	###
+	###
+	###
+
+	>>> print_square(0)
+
+
+	>>> print_square(1)
+	#
+
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+============================
+Test for negative Parameters
+============================
+	>>> print_square(-4)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+	>>> print_square(-50)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+=========================
+Test for wrong Parameters
+=========================
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+	>>> print_square('Stringy')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square('')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(9.4)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square((5, 9))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square([6, 7, 8, 9])
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square({"key": "value"})
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+==========================
+Test for None Values
+==========================
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer

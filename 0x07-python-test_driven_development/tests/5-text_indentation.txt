@@ -1,0 +1,150 @@
+================================================
+Module for printing new lines included texts
+================================================
+
+==============
+Import module:
+==============
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+
+=========
+Function:
+=========
+A function that includes new line in a text
+
+
+===========
+Operations:
+===========
+Parameters must be of type str, otherwise raise a TypeError
+
+==================
+Testcases
+==================
+
+==================
+Test for docstring
+==================
+
+	>>> x = __import__("5-text_indentation").__doc__
+	>>> print(len(x) > 0)
+	True
+
+	>>> y = __import__("5-text_indentation").text_indentation.__doc__
+	>>> print(len(y) > 0)
+	True
+
+=====================
+Test for string input
+=====================
+	>>> text_indentation("Hello. kitty")
+	Hello.
+	<BLANKLINE>
+	kitty
+
+	>>> text_indentation("Chi?Amaka")
+	Chi?
+	<BLANKLINE>
+	Amaka
+
+	>>> text_indentation("Hi. World People. :")
+	Hi.
+	<BLANKLINE>
+	World People.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
+	>>> text_indentation("Robert: Downey Junior")
+	Robert:
+	<BLANKLINE>
+	Downey Junior
+
+	>>> text_indentation(":::")
+	:
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
+
+	>>> text_indentation("::?:;.:;")
+	:
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	;.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	;
+
+	>>> text_indentation("?")
+	?
+	<BLANKLINE>
+
+	>>> text_indentation("They all blankly looked at each wondering how this could have happened, /How did things get this bad?")
+	They all blankly looked at each wondering how this could have happened, /How did things get this bad?
+	<BLANKLINE>
+
+	>>> text_indentation("They all blankly looked at each wondering how this could have happened. :How did things get this bad?")
+	They all blankly looked at each wondering how this could have happened.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	How did things get this bad?
+	<BLANKLINE>
+
+	>>> text_indentation("They all blankly looked at each wondering how this could have happened, ¿How did things get this bad?")
+	They all blankly looked at each wondering how this could have happened, ¿How did things get this bad?
+	<BLANKLINE>
+
+	>>> text_indentation(":$15.")
+	:
+	<BLANKLINE>
+	$15.
+	<BLANKLINE>
+
+	>>> text_indentation("$15")
+	$15
+
+	>>> text_indentation("(Me: 30)")
+	(Me:
+	<BLANKLINE>
+	30)
+
+	=========================
+	Test for wrong parameters
+	=========================
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+	>>> text_indentation((1, 2, 3, 4, 5))
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation([1, 2, 3, 4, 5])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(1000)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(50.9)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+==========================
+Test for None Values
+==========================	
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
