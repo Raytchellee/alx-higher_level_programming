@@ -66,12 +66,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        hashes = []
+        hashe = []
         for idx in range(self.__height):
-            [hashes.append(str(self.print_symbol)) for _ in range(self.__width)]
+            [hashe.append(str(self.print_symbol)) for _ in range(self.__width)]
             if idx != self.__height - 1:
-                hashes.append("\n")
-        return ("".join(hashes))
+                hashe.append("\n")
+        return ("".join(hashe))
 
     def __repr__(self):
         """Creates a new rectangle class"""
