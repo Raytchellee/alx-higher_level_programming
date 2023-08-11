@@ -3,6 +3,7 @@
     A module for adding two parameters
 """
 
+
 def add_integer(a, b=98):
     """Adds two integers"""
     if type(a) is not int and type(a) is not float:
