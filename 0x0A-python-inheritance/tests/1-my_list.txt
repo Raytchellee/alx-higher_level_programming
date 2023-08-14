@@ -62,11 +62,11 @@ Test for correct input
     >>> my_list.append(34)
     >>> my_list.append(26)
     >>> print(my_list)
-    [26, 54, 34, 76, 95, 87]
+    [95, 87, 76, 54, 34, 26]
     >>> my_list.print_sorted()
     [26, 34, 54, 76, 87, 95]
     >>> print(my_list)
-    [26, 54, 34, 76, 95, 87]
+    [95, 87, 76, 54, 34, 26]
 
     >>> my_list = MyList()
     >>> my_list.append(-13)
@@ -75,7 +75,7 @@ Test for correct input
     >>> my_list.append(27)
     >>> my_list.append(40)
     >>> print(my_list)
-    [-127, -36, -18, 27, 40]
+    [-13, -36, -18, 27, 40]
     >>> my_list.print_sorted()
     [-36, -18, -13, 27, 40]
     >>> print(my_list)
@@ -139,4 +139,3 @@ Test for None Values
     >>> my_list = MyList(None)
     Traceback (most recent call last):
     TypeError: 'NoneType' object is not iterable
-
