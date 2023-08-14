@@ -10,7 +10,7 @@ Import module:
 =========
 Function:
 =========
-A function that mprints list
+A function that prints list
 
 ===========
 Operations:
@@ -100,6 +100,8 @@ Test for correct input
     [35]
     >>> my_list.print_sorted()
     [35]
+    >>> print(my_list)
+    [35]
 
     >>> my_list = MyList()
     >>> print(my_list)
@@ -118,13 +120,13 @@ Test for correct input
     >>> print(my_list)
     ['Butter', 'Some', 'Toast', 'Bought', 'Beatrice']
     >>> my_list.print_sorted()
-    ['Beatrice', 'Butter', 'Bought', 'Some', 'Toast']
+    ['Beatrice', 'Bought', 'Butter', 'Some', 'Toast']
     >>> print(my_list)
     ['Butter', 'Some', 'Toast', 'Bought', 'Beatrice']
 
-    =========================
-    Test for wrong parameters
-    =========================
+=========================
+Test for wrong parameters
+=========================
     >>> my_list = MyList()
     >>> print(my_list.print_sorted)
     <bound method MyList.print_sorted of []>
