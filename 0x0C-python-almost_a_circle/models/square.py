@@ -25,7 +25,7 @@ class Square(Rectangle):
             (id, size, x, y)
             **kwargs: New input key/value pairs
         """
-        if args and len(args) is not 0:
+        if args and len(args) != 0:
             idx = 0
             for input_val in args:
                 if idx == 0:
@@ -41,7 +41,7 @@ class Square(Rectangle):
                     self.y = input_val
                 idx += 1
 
-        elif kwargs and len(kwargs) is not 0:
+        elif kwargs and len(kwargs) != 0:
             for keyy, val in kwargs.items():
                 if keyy == "id":
                     if val is None:
