@@ -1,3 +1,5 @@
--- displays the max temperature of each state (ordered by State name)
-SELECT state, MAX(value) max_temp from temperatures GROUP  BY state
-	ORDER BY state DESC LIMIT 3;
+-- displays the max temperature of each state (ordered by State)
+SELECT state, MAX(value) max_temp from temperatures 
+	GROUP  BY state
+	ORDER BY state ASC 
+	LIMIT 3;
