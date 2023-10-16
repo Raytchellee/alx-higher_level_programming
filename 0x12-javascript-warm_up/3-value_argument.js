@@ -1,14 +1,11 @@
 #!/usr/bin/node
 const argv = process.argv;
-let count = 0;
+argv = argv.slice(2);
 
-argv.forEach((item, idx) => {
-  if (idx > 1) {
+if (argv[0]) {
+  argv.forEach((item, idx) => {
     console.log(item);
-    count++;
-  }
-});
-
-if (count === 0) {
+  });
+} else {
   console.log('No argument');
 }
