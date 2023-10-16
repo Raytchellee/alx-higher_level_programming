@@ -1,10 +1,8 @@
 #!/usr/bin/node
-const argv = process.argv.slice(2);
+const arg = process.argv[2];
 
-if (argv[0]) {
-  argv.forEach((item, idx) => {
-    console.log(item);
-  });
+if (arg) {
+  console.log(arg);
 } else {
   console.log('No argument');
 }
