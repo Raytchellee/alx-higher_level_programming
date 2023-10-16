@@ -11,6 +11,8 @@ if (argv.length < 4) {
     if (num > largest) {
       second = largest;
       largest = num;
+    } else if (second === -Infinity || num > second) {
+      second = num;
     }
   }
   console.log(second);
