@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const argv = process.argv;
 let count = 0;
 
 argv.forEach((item, idx) => {
