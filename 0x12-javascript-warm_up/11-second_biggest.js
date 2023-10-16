@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const argv = process.argv;
 let largest = -Infinity;
 let second = -Infinity;
 
