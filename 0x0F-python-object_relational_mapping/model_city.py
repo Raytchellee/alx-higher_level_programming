@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Declare class Cities """
+
 from model_state import Base
 from sqlalchemy import Column, ForeignKey, Integer, String
 
