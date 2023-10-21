@@ -15,9 +15,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Sesh = sessionmaker(bind=engine)
     sesh = Sesh()
-    item = sesh.query(State).order_by(State.id).first()
-    if item is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(item.id, item.name))
+    added_state = State(name='Louisiana')
+    sesh.add(added_state)
+    sesh.commit()
+    print(added_state.id)
     sesh.close()

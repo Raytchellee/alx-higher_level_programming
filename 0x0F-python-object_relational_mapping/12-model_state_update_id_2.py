@@ -15,9 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Sesh = sessionmaker(bind=engine)
     sesh = Sesh()
-    item = sesh.query(State).order_by(State.id).first()
-    if item is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(item.id, item.name))
+    sesh.query(State).filter(State.id == 2).update(
+        {"name": "New Mexico"})
+    sesh.commit()
     sesh.close()

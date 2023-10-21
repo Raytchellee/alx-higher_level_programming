@@ -15,9 +15,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Sesh = sessionmaker(bind=engine)
     sesh = Sesh()
-    item = sesh.query(State).order_by(State.id).first()
-    if item is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(item.id, item.name))
+    all_states = sesh.query(State).filter(
+        State.name.contains('a')).all()
+    for item in all_states:
+        sesh.delete(item)
+    sesh.commit()
     sesh.close()

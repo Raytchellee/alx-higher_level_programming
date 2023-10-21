@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""lists states from the database using orm"""
+"""lists cities from the database using orm"""
 
 from sys import argv
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+from model_city import City
 
 if __name__ == "__main__":
     """lists states from the database using orm"""
@@ -15,9 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Sesh = sessionmaker(bind=engine)
     sesh = Sesh()
-    item = sesh.query(State).order_by(State.id).first()
-    if item is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(item.id, item.name))
+    for item in sesh.query(State, City).join(
+      City).order_by(City.id).all():
+        print("{}: ({}) {}".format(item[0].name, item[1].id, item[1].name))
     sesh.close()
