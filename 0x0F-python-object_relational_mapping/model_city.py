@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from model_state import Base
 from sqlalchemy import Column, ForeignKey, Integer, String
 
