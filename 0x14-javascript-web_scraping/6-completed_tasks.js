@@ -8,7 +8,7 @@ req(link, function (err, res, data) {
     console.log(err);
   } else {
     const tasks = JSON.parse(data);
-    let done = {};
+    const done = {};
     tasks.forEach((todo) => {
       if (todo.completed && !(todo.userId in done)) {
         done[todo.userId] = 1;
